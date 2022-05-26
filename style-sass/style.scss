@@ -1,3 +1,9 @@
+@mixin texto ($font, $weight, $align){
+    font-family: $font;
+    font-weight: $weight;
+    text-align: $align;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +29,7 @@ h6 {
 
 .contenedor h1 {
     display: flex;
+    justify-content: center;
     width: 100%;
     text-align: center;
     background-size: cover;
@@ -40,8 +47,7 @@ h6 {
 }
 
 .animated-shadow {
-    display: flex;
-    font-size: 50px;
+    font-size: 70px;
     color: #ffffff;
     font-family: "poppins";
     left: 0;
@@ -50,9 +56,7 @@ h6 {
     text-transform: uppercase;
     width: 100%;
     animation: move linear 4000ms infinite;
-    z-index: 2;
-    text-align: center;
-    position: relative;
+    z-index: 2
 }
 
 
@@ -60,7 +64,6 @@ ul {
     list-style: none;
     font-family: "poppins";
     font-size: larger; 
-    text-align: center;
 }
 
 .navbar {
@@ -117,10 +120,10 @@ ul {
 .nav-menu{
     position: fixed;
     left: -100%;
-    top: 90px;
+    top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color: rgba(250, 250, 250, 0.918);
+    background-color: rgba(133, 106, 72, 0.438);
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -133,7 +136,6 @@ ul {
       left: 0;  
     }
 }
-
 .navbar {
     background-image: url(../assets/background-color.webp);
     font-family: "Montserrat";
@@ -166,12 +168,11 @@ nav a img {
     box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.57);
     -webkit-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.57);
     -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.57);
-
 }
 
 .card-body {
     text-align: center;
-    background: radial-gradient(circle at top left, #68481f, #8d6d279f);
+    background: radial-gradient(circle at top left, #2770ac, #9022c39f);
     border: black 3px solid;
 }
 
@@ -179,20 +180,16 @@ nav a img {
     min-height: 3rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    color: white;
 }
 
 .card-text {
     min-height: 10rem;
     font-family: 'Montserrat', sans-serif;
-    color: white;
 }
 
 
 form {
-    display: flex;
-    font-family: "montserrat";
-    width: 50%;
+    font-family: montserrat;
     padding: 16px;
     border-radius: 10px;
     background-color: rgba(204, 204, 204, 0.397);
@@ -204,17 +201,18 @@ form {
 form label {
     width: 72px;
     font-weight: bold;
-    display: flex;
+    display: inline-block;
 }
 
 form input[type="text"],
 form input[type="email"] {
-    width: 100%;
+    width: 180px;
     padding: 3px 10px;
     border: 1px solid #f6f6f6;
     border-radius: 3px;
     background-color: #f6f6f6;
     margin: 8px 0;
+    display: inline-block;
 }
 
 form input[type="submit"] {
@@ -232,7 +230,6 @@ form input[type="submit"]:hover {
     cursor: pointer;
 }
 
-
 textarea {
     width: 100%;
     height: 100px;
@@ -243,11 +240,6 @@ textarea {
     resize: none;
     display: block;
     font-family: "Montserrat Alternates";
-}
-
-section{
-    width: 50%;
-    margin-left: 25%;
 }
 
 .galeria {
@@ -335,11 +327,12 @@ section{
 
 .imagenes {
     font-size: x-large;
-    font-family: "montserrat";
+    font-family: montserrat;
     font-weight: bold;
     margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
-    padding-top: 1%;
+
 }
 
 /* estilo para la ubicacion */
@@ -364,9 +357,9 @@ footer {
     background-color: rgba(120, 120, 120, .5);
     text-align: center;
     width: 100%;
-    font-family: "montserrat";
+    margin-top: 15%;
+    font-family: montserrat;
     font-weight: bold;
-    margin-top: 3%;
 }
 
 footer .p {
@@ -384,23 +377,12 @@ footer .p {
 
 .nosotros-bio {
     justify-content: center;
-    font-family: "poppins";
+    font-family: poppins;
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
     margin-top: 50px;
-    margin-left: 25%;
-    margin-right: 25%;
-    background-color: #a0753c4d;
-    border-radius: 15px;
-
 }
 
 .wrapper-video {
     text-align: center;
-    padding-top: 80px;
-    
-}
-
-iframe {
-    box-shadow: 15px 15px 15px -2px rgba(0, 0, 0, 0.57);
 }

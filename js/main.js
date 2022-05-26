@@ -1,11 +1,3 @@
-$(document).ready(function () {
-    $('.zoom').hover(function () {
-        $(this).addClass('transition');
-    }, function () {
-        $(this).removeClass('transition');
-    });
-});
-
 const hamburger = document.querySelector(".hamburger");
 console.log(hamburger)
 const navMenu = document.querySelector(".nav-menu");
